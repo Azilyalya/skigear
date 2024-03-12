@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    color: black;
+    text-decoration: none;
+    font-family: "roboto" ;
+    transition: .4s;
+    box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+
+
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Light.ttf);
+    font-weight: 200;
+}
+
+
+/* общее */
+.max-width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-150{
+    padding-bottom: 150px;
+}
+
+.top-150{
+    padding-top: 150px;
+}
+
+body{
+    background-color: #EAF1F9;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+.icon-menu{
+    display: flex;
+    gap: 20px;
+}
+.logo img{
+    height: 80px;
+}
+
+.adaptiv-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+/* kroshki */
+.kroshki{
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.kroshki a, .kroshki p{
+    color: #8A9DB2;
+}
+
+/* oformlenie */
+.oformlenie, .one-tovar, .summ-1, .itog{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+h1{
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+
+.oform-left, .fio, .email, .tel, .adress, .comments, .oform-left-form, .oform-right, .summ{
+    display: flex;
+    flex-direction: column;
+}
+
+.oform-left{
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    gap: 20px;
+}
+
+.fio, .email, .tel, .adress, .comments{
+    gap: 5px;
+    font-size: 15px;
+}
+
+.oform-left-form{
+    gap:15px ;
+}
+
+input{
+    border-radius: 2px;
+    border: 1px solid black;
+    padding: 5px 0;
+}
+
+.comments input{
+    height: 100px;
+}
+
+.oform-left button{
+    padding: 10px 0;
+    border: 1px solid #95411B;
+    color: white;
+    background-color: #95411B;
+}
+
+.oform-left button:hover{
+    color: #95411B;
+    background-color: white;
+}
+.oform-right{
+    background-color: white;
+    padding: 20px;
+    gap: 25px;
+    width: 45%;
+}
+
+.oform-right img{
+    height: 120px;
+}
+
+.one-tovar-left{
+    display: flex;
+    width: 60%;
+}
+
+.one-tovar-right{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.one-tovar{
+    align-items: center;
+}
+
+.summ{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+/* footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #8A9DB2;
+    padding-top: 20px;
+    
+}
+
+.footer-icon{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#burger, [for=burger]{
+    display: none;
+}
+
+/* adaptiv */
+@media screen and (max-width:376px){
+    header{
+     padding: 0 20px;
+    }
+     [for=burger]{
+         display: block;
+         position: fixed;
+         top: 40px;
+         width: 50px;
+         right: 20px;
+     } 
+     
+     [for=burger]::before{
+         content: url(../assets/img/icon/menu.png);
+        
+     }
+ 
+     .icon-menu{
+         justify-content: right;
+         padding-top: 10px;
+     }
+     .adaptiv-menu{
+         
+         position: fixed;
+         margin-top: 50px;
+         top: 10px;
+         right: 20%;
+         padding: 20px;
+         background: rgba(255, 255, 255, 0.823);
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         display: none;
+         text-align: right;
+        
+     }
+ 
+     header nav{
+         flex-direction: column;
+         gap: 10px;
+     } 
+  
+     #burger:checked + label + .adaptiv-menu {
+         display: block;
+         animation: show 0.5s;
+     }
+  
+     #burger:checked + [for=burger]::before{
+         content: '⨂';
+         
+     }
+  
+     @keyframes show {
+         0%{
+             opacity: 0;
+         }
+  
+         100%{
+             opacity: 1;
+         }
+     }
+
+     .logo img{
+        height: 50px;
+    }
+
+    .top-150{
+        padding-top: 30px;
+    }
+
+    .btn-150{
+        padding-bottom: 30px;
+    }
+
+    .kroshki{
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 30px;
+        padding: 10px 20px;
+    
+    }
+
+    .oformlenie{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .oform-left, .oform-right{
+        width: 90%;
+        
+    }
+
+    .footer-icon img{
+        height: 20px;
+    }
+    
+    footer{
+        padding: 5px 20px;
+    }
+}

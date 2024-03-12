@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    color: black;
+    text-decoration: none;
+    font-family: "roboto" ;
+    transition: .4s;
+    box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+
+
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Light.ttf);
+    font-weight: 200;
+}
+
+
+/* общее */
+.max-width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-100{
+    padding-bottom: 100px;
+}
+
+
+body{
+    background-color: #EAF1F9;
+}
+
+
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+.icon-menu{
+    display: flex;
+    gap: 20px;
+}
+.logo img{
+    height: 80px;
+}
+
+.adaptiv-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+/* kroshki */
+.kroshki{
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.kroshki a, .kroshki p{
+    color: #8A9DB2;
+}
+
+/* korzina */
+h1{
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+.korzina{
+    justify-content: space-between;
+
+}
+.korzina, .one-tovar, .one-tovar-left, .kolvo, .one-tovar-right, .itog, .tovars{
+    display: flex;
+    align-items: start;
+}
+
+.korzina-left, .one-tovar-icon, .tovar-info, .korzina-right{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.one-tovar-left img{
+    height: 150px;
+    width: 120px;
+}
+
+.one-tovar-icon img{
+    width: 20px;
+    height: 20px;
+}
+
+.korzina-left{
+    width:70% ;
+    background-color: white;
+    padding: 20px;
+    gap: 40px;
+    
+}
+
+.one-tovar, .itog, .tovars{
+    justify-content: space-between;
+}
+
+.tovar-info{
+    width: 300px;
+    gap: 30px;
+}
+
+.one-tovar-right, .one-tovar-icon{
+    gap: 25px;
+
+}
+
+.kolvo{
+    padding: 5px 20px;
+    background-color: rgba(211, 211, 211, 0.388);
+    gap: 10px;
+}
+
+.kolvo p{
+    cursor: pointer;
+}
+
+.one-tovar-icon img{
+    cursor: pointer;
+}
+.one-tovar{
+    border-bottom: 1px solid rgba(211, 211, 211, 0.388) ;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.korzina-right{
+    background-color: white;
+    padding: 20px;
+    width: 25%;
+    gap: 20px;
+}
+
+.main-price{
+    font-size: 25px;
+}
+
+.korzina-right a{
+    background-color: #95411B;
+    color: white;
+    padding: 10px 0;
+    border: 1px solid #95411B;
+    text-align: center
+}
+
+.korzina-right a:hover{
+    color: #95411B;
+    background-color: white;
+}
+
+/* footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #8A9DB2;
+    padding-top: 20px;
+    
+}
+
+.footer-icon{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#burger, [for=burger]{
+    display: none;
+}
+
+/* adaptiv */
+@media screen and (max-width:376px){
+    header{
+     padding: 0 20px;
+    }
+     [for=burger]{
+         display: block;
+         position: fixed;
+         top: 40px;
+         width: 50px;
+         right: 20px;
+     } 
+     
+     [for=burger]::before{
+         content: url(../assets/img/icon/menu.png);
+        
+     }
+ 
+     .icon-menu{
+         justify-content: right;
+         padding-top: 10px;
+     }
+     .adaptiv-menu{
+         
+         position: fixed;
+         margin-top: 50px;
+         top: 10px;
+         right: 20%;
+         padding: 20px;
+         background: rgba(255, 255, 255, 0.823);
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         display: none;
+         text-align: right;
+        
+     }
+ 
+     header nav{
+         flex-direction: column;
+         gap: 10px;
+     } 
+  
+     #burger:checked + label + .adaptiv-menu {
+         display: block;
+         animation: show 0.5s;
+     }
+  
+     #burger:checked + [for=burger]::before{
+         content: '⨂';
+         
+     }
+  
+     @keyframes show {
+         0%{
+             opacity: 0;
+         }
+  
+         100%{
+             opacity: 1;
+         }
+     }
+
+     .logo img{
+        height: 50px;
+    }
+
+    .top-150{
+        padding-top: 30px;
+    }
+
+    .btn-150{
+        padding-bottom: 30px;
+    }
+
+    .kroshki{
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+h1{
+    font-size: 30px;
+    padding: 10px 20px;
+
+}
+
+.korzina{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tovar-info h3{
+    width: 100%;
+}
+
+.korzina-right, .korzina-left{
+    width: 90%;
+}
+
+.one-tovar{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.one-tovar-left{
+    width: 100%;
+}
+.one-tovar-right h2{
+    font-size: 20px;
+}
+
+.one-tovar-icon{
+    flex-direction: row;
+}
+
+.footer-icon img{
+    height: 20px;
+}
+
+footer{
+    padding: 5px 20px;
+}
+}

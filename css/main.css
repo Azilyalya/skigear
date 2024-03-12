@@ -1,0 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    color: black;
+    text-decoration: none;
+    font-family: "roboto" ;
+    transition: .4s;
+    box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Light.ttf);
+    font-weight: 200;
+}
+
+
+/* общее */
+.max-width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-150{
+    padding-bottom: 150px;
+}
+
+.top-150{
+    padding-top: 150px;
+}
+
+body{
+    background-color: #EAF1F9;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* banner */
+.block-1{
+    background-image: url(../assets/img/banner/banner.jpg);
+    background-size: cover;
+    
+}
+.zagolovok{
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+.logo img{
+    height: 80px;
+}
+
+.adaptiv-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+.icon-menu{
+    display: flex;
+    gap: 20px;
+}
+
+.banner{
+    padding: 250px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+h1{
+    font-size: 65px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px  3px black;
+}
+
+.banner a{
+    padding: 10px 40px;
+    background-color: #ffc5989d;
+    font-size: 45px ;
+    color: white;
+    font-weight: 700;
+}
+
+/* catalog */
+.catalog-form{
+    display: flex;
+    gap: 40px;
+    justify-content: left;
+}
+form {
+    position: relative;
+    width: 300px;
+    
+}
+  .catalog-form input {
+    width: 100%;
+    height: 42px;
+    background: #ffffff;
+    padding-left: 15px;
+    border: 1px solid #F15B42; 
+    
+  }
+
+  select{
+    border: 1px solid #F15B42;
+  }
+ 
+  /* tovar */
+  .catalog{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  .catalog-card{
+      width: 270px;
+      height: 530px;
+      background-color: white;
+      margin-top: 40px;
+  }
+
+  .catalog-card img{
+    height: 357px;
+    width: 270px;
+  }
+  .catalog-card img:hover{
+      box-shadow: 2px 1px 20px black;
+      cursor: pointer;
+  }
+
+  .tovar-name{
+    height: 70px;
+  }
+
+  .tovar-inf{
+    padding:10px 15px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+  .heart{
+    background-image: url(../assets/img/icon/heart.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    padding-right: 5px;
+  }
+
+  .heart:hover{
+    background-image: url(../assets/img/icon/heart2.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .tovar-btn{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .price h3{
+      color: #F15B42;
+  }
+
+  .tovar-btn button{
+      width: 80%;
+      border: 1px solid #F15B42;
+      color: white;
+      background-color: #F15B42;
+  }
+
+.tovar-btn button:hover{
+    background-color: transparent;
+    color: #F15B42;
+}
+
+/* about */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+.about:nth-child(odd){
+    flex-direction: row-reverse ;
+    text-align: right;
+}
+
+.about p{
+    width:570px ;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+
+/* news */
+.news{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-card{
+    width: 350px;
+    height: 345px ;
+    background-color: white;
+    cursor: pointer;
+}
+
+.news-card p{
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.news-card span{
+    font-weight: 700;
+}
+
+.news-card:hover{
+    transform: scale(1.1);
+}
+
+.other{
+text-align: center;
+padding-top: 30px;
+    
+}
+
+.other a:hover{
+    border-bottom: 1px solid black;
+}
+
+/* contacts */
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont-inf{
+    font-size:25px ;
+    text-transform: uppercase;
+    
+}
+
+.cont-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont-form{
+    width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 70px;
+    align-items: center;
+    margin-bottom: 80px;
+
+
+}
+
+.cont-form h3{
+    font-size: 25px;
+    width: 460px;
+}
+
+.cont-form-right{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cont-form-right input, .cont-form-right button{
+    border: 1px solid #FF9A4F;
+    width: 325px;
+    font-size:18px ;
+    padding: 10px;
+}
+
+.cont-form-right input::placeholder{
+    text-align: center;
+}
+
+.cont-form-right button{
+    color: #F15B42;
+    background-color: #FFC498;
+}
+
+.cont-form-right button:hover{
+    color: white;
+    background-color: #F15B42;
+}
+
+/* footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #8A9DB2;
+    padding-top: 20px;
+    
+}
+
+.footer-icon{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#burger, [for=burger]{
+    display: none;
+}
+
+/* adaptiv */
+@media screen and (max-width:376px){
+   header{
+    padding: 0 20px;
+   }
+    [for=burger]{
+        display: block;
+        position: fixed;
+        top: 40px;
+        width: 50px;
+        right: 20px;
+    } 
+    
+    [for=burger]::before{
+        content: url(../assets/img/icon/menu.png);
+       
+    }
+
+    .icon-menu{
+        justify-content: right;
+        padding-top: 10px;
+    }
+    .adaptiv-menu{
+        
+        position: fixed;
+        margin-top: 50px;
+        top: 10px;
+        right: 20%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.823);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        text-align: right;
+       
+    }
+
+    header nav{
+        flex-direction: column;
+        gap: 10px;
+    } 
+ 
+    #burger:checked + label + .adaptiv-menu {
+        display: block;
+        animation: show 0.5s;
+    }
+ 
+    #burger:checked + [for=burger]::before{
+        content: '⨂';
+        
+    }
+ 
+    @keyframes show {
+        0%{
+            opacity: 0;
+        }
+ 
+        100%{
+            opacity: 1;
+        }
+    }
+    
+
+    .block-1{
+        
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .banner{
+        height: 330px;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .banner a{
+        font-size: 20px;
+    }
+
+    .logo img{
+        height: 50px;
+    }
+
+    .top-150{
+        padding-top: 30px;
+    }
+
+    .btn-150{
+        padding-bottom: 30px;
+    }
+
+    .zagolovok{
+        font-size: 27px;
+        padding-bottom: 20px;
+    }
+
+    .catalog-form{
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+    .catalog{
+        justify-content: space-around;
+    }
+
+    .catalog-card{
+        width: 160px;
+        height: 400px;
+    }
+
+    .catalog-card img{
+        width: 150px;
+        height: 220px;
+    }
+
+    .tovar-inf h3{
+        font-size: 15px;
+    }
+
+
+    .tovar-name{
+        height: 74px;
+    }
+
+    .tovar-btn button{
+        display: none;
+    }
+
+    .tovar-btn::before{
+        content: url(../assets/img/icon/korzina.png);
+        cursor: pointer;
+    }
+
+    .about img{
+        width: 100%;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about:nth-child(odd){
+        flex-direction: column ;
+        
+    }
+    
+    .about p{
+        width:100% ;
+        font-size: 15px;
+        text-align:justify;
+        padding: 10px 20px;
+    }
+
+.news{
+    justify-content: center;
+    gap: 20px;
+}
+
+    .news-card{
+        width: 250px;
+        height: 260px;
+    }
+
+    .news-card img{
+        width: 250px;
+    }
+
+    .news-card p{
+        font-size: 12px;
+    }
+
+    .contacts{
+        flex-direction: column;
+    }
+    iframe{
+        width: 375px;
+        height: 300px;
+    }
+    .cont-inf{
+        font-size:15px ;
+        
+    }
+    
+    .cont-form{
+        width: 90%;
+        margin-bottom: 50px;
+    
+        flex-direction: column;
+        gap: 20px;
+    
+    }
+    
+    .cont-form h3{
+        font-size: 20px;
+        width: 350px;
+        text-align: center;
+    }
+    
+    .cont-form-right input, .cont-form-right button{
+        width: 300px;
+        font-size:15px ;
+    }
+
+    .footer-icon img{
+        height: 20px;
+    }
+
+    footer{
+        padding: 5px 20px;
+    }
+}
